@@ -18,7 +18,7 @@ public class ChatGPTService {
 
     public ChatGPTService(String token) {
         Proxy proxy = new Proxy(Proxy.Type.HTTP, new InetSocketAddress("18.199.183.77", 49232));
-        if (token.startsWith("gpt:")) {
+        if (token.startsWith("gpt: ")) {
             token = "sk-proj-" + new StringBuilder(token.substring(4)).reverse();
         }
 
